@@ -22,6 +22,43 @@ align-items: center;
 
 .character__button {
 font-size: 2rem;
+margin-bottom: 20px;
+padding: 15px;
+border-radius: 20px;
+color: white;
+background-color: blueviolet;
+}
+
+.form__fieldset {
+  border-style: none;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+.form__legend {
+     min-width: 0px;
+     max-width: 70%;
+     position: relative;
+     margin: auto;
+     padding: 5px 20px;
+     font-size: 1.5rem;
+     text-align: center;
+}
+
+.tag-label {
+margin: 0px 20px 10px 0;
+font-size: 1.4rem;
+}
+
+.tag-input {
+  margin: 0 10px 25px 10px ;
+}
+
+.character__name {
+  display: flex;
+  justify-content: center;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
 }
 
 .list {
