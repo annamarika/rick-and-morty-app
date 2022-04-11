@@ -91,6 +91,17 @@ function characterList(characters) {
       list.append(item);
     });
 }
+
+/*let colorBox = function () {
+  if (character.status.includes("Alive")) {
+    document.body.style.backgroundColor = "red";
+  } else if (character.status.includes("Dead")) {
+    document.body.style.backgroundColor = "red";
+  } else {
+    document.body.style.backgroundColor = "red";
+  }
+};*/
+
 filterForm.addEventListener("change", () => {
   containerCharacters.innerHTML = "";
   currentFilter = filterForm.elements["tag-filter"].value;
