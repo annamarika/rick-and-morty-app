@@ -71,6 +71,7 @@ async function fetchCharacters(url) {
 }
 const filterForm = document.querySelector("[data-js=filter-form]");
 function characterList(characters) {
+  containerCharacters.innerHTML = "";
   const list = document.createElement("ul");
   list.className = "list";
   containerCharacters.append(list);
@@ -84,23 +85,23 @@ function characterList(characters) {
       const item = document.createElement("li");
       item.className = "item";
       item.innerHTML = `
-       <img src="${character.image}"/>
+           <img src="${character.image}"/>
       <p class="character__name">${character.name}</p>
     `;
-
+      colorBox(character, item);
       list.append(item);
     });
 }
 
-/*let colorBox = function () {
-  if (character.status.includes("Alive")) {
-    document.body.style.backgroundColor = "red";
-  } else if (character.status.includes("Dead")) {
-    document.body.style.backgroundColor = "red";
+let colorBox = function (character, item) {
+  if (character.status === "Alive") {
+    item.style.backgroundColor = "red";
+  } else if (character.status === "Dead") {
+    item.style.backgroundColor = "green";
   } else {
-    document.body.style.backgroundColor = "red";
+    item.style.backgroundColor = "blue";
   }
-};*/
+};
 
 filterForm.addEventListener("change", () => {
   containerCharacters.innerHTML = "";
